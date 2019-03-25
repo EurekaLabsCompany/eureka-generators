@@ -1,0 +1,45 @@
+body{
+    padding-top: 30px;
+}
+
+.moment-container{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+}
+
+.title{
+    font-weight: 100;
+    font-size: 48px;
+}
+
+.info-container{
+    font-style: italic;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position: absolute;
+    bottom: 46px;
+    right: 480px;
+    color: white;
+}
+
+.yellow-color{
+    color: #FFCC29
+}
+
+.picture-label{
+    position: absolute;
+    z-index: -1;
+    min-width: 400px;    
+    min-height: 400px;    
+    bottom: 2px;
+    right: 2px;
+}
+
+.banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

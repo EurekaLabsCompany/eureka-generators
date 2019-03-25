@@ -17,7 +17,7 @@
                             <h3 id="description-label">Description of moment</h3>
                             <h2 class="yellow-color" id="author-label">Author</h2>
                         </div>
-                        <img src="./assets/eureka-moment.png" style="width: 100%"/>
+                        <img src="./assets/eureka-moment.png" class="img-base"/>
                         <img id="picture-preview" class="picture-label"/>
                     </div>
                 </div>
@@ -25,19 +25,19 @@
                 
                 <div class="form-group">                    
                     <label for="title">Title</label>
-                    <input type="title" class="form-control" id="title"/>
+                    <input type="title" class="form-control" onblur="addFieldToPreview(event)" id="title"/>
                 </div>
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <input type="description" class="form-control" id="description"/>
+                    <input type="description" class="form-control" onblur="addFieldToPreview(event)" id="description"/>
                 </div>
 
                 <div class="form-group">
                         <div class="row">
                             <div class="col">
                                     <label for="Author">Author</label>
-                                    <input type="author" class="form-control" id="author"/>
+                                    <input type="author" class="form-control" onblur="addFieldToPreview(event)" id="author"/>
                             </div>
 
                             <div class="col">

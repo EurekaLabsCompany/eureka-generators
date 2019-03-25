@@ -5,10 +5,13 @@ function onGenerate(blob){
 }
 
 
-function generateBanner(){
-    var fields = ['title', 'description', 'author'];
-    fields.forEach(applyField);
-    donwloadBanner();
+function generateBanner(){    
+    setTimeout(donwloadBanner, 500);
+    
+}
+
+function addFieldToPreview(event){
+    applyField(event.currentTarget.id);
 }
 
 function applyField(field){

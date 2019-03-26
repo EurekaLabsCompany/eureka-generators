@@ -20,6 +20,16 @@ function applyField(field){
 }
 
 function donwloadBanner(){
+
+    domtoimage.toJpeg(document.getElementById('eureka-moment'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'eureka-moment';
+        link.href = dataUrl;
+        link.click();
+    });
+
+    return;
     var node = document.getElementById('eureka-moment');
 
     domtoimage.toBlob(node)

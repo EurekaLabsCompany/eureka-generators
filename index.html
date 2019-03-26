@@ -3,7 +3,7 @@
         <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> 
         <link rel="stylesheet" type="text/css" href="./assets/app.css"> 
         <link href="https://fonts.googleapis.com/css?family=Roboto:100i,400i" rel="stylesheet">
-        <script src="./node_modules/dom-to-image/dist/dom-to-image.min.js"></script>
+        <script src="./node_modules/dom-to-image/src/dom-to-image.js"></script>
         <script src="./node_modules/file-saver/dist/FileSaver.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./assets/app.js"></script>
@@ -40,9 +40,10 @@
                                     <input type="author" class="form-control" onblur="addFieldToPreview(event)" id="author"/>
                             </div>
 
-                            <div class="col">
+                            <div class="col file-container">
                                     <label for="Picture">Picture</label>
-                                    <input type="file" class="form-control" id="picture" onchange="previewImage(event)"/>
+                                    <input type="file" class="file-input" id="picture" onchange="previewImage(event)"/>
+                                    <span class="btn btn-light btn-block">Choose a picture</span>
                             </div>
                         </div>
                     
@@ -54,9 +55,5 @@
                 
             </div>
 
-
-        
-
-        <input>
     </body>
 </html>

@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" href="./assets/app.css"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100i,400i" rel="stylesheet">
+        <script src="./node_modules/dom-to-image/src/dom-to-image.js"></script>
+        <script src="./node_modules/file-saver/dist/FileSaver.min.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./assets/app.js"></script>
+    </head>
+    <body>
+            <div class="container">
+                <div class="banner-container">
+                    <div class="form-group" id="template-section">
+                        <table style="border-collapse:collapse; background-color:rgb(255,255,255); color:gray" >
+                            <tbody>
+                                <tr>
+                                    <td style="font-family:arial; font-size:11px; text-align:center"><a href="http://www.eurekalabs.com.br/"
+                                            target="_blank" rel="noopener noreferrer" style="color:rgb(0,123,255)"><img
+                                                src="http://eurekalabs.com.br/wp-content/uploads/2016/08/eureka-logo.png"
+                                                style="vertical-align:middle; border-style:none"></a></td>
+                                    <td style="font-family:arial; font-size:12px; padding-left:10px; padding-top:10px; color:rgb(78,90,98)">
+                                        <h3 id="name-label" style="margin-top:0px; margin-bottom:0.3rem; font-weight:500; line-height:1.2; font-size:1.75rem">Your Name</h3>
+                                        <small id="role-label" style="font-size:9.6px; line-height: 1rem;">YOUR ROLE</small><br>
+                                        <span id="phone-label" style="line-height: 1rem;">(44) 444 444 444</span><br>
+                                        <a id="email-label" style="line-height: 1rem;" href="mailto:contato@eurekalabs.com.br" target="_blank" rel="noopener noreferrer">your-email@eurekalabs.com.br</a><span>&nbsp;</span><br>
+                                        <br>
+                                        <a href="https://www.facebook.com/eliel.barone" target="_blank" rel="noopener noreferrer"
+                                            style="color:rgb(0,123,255)"><img
+                                                src="http://eurekalabs.com.br/wp-content/uploads/2016/08/facebook.png"
+                                                style="vertical-align:middle; border-style:none"></a>&nbsp;&nbsp;<span>&nbsp;</span><a
+                                            href="https://www.linkedin.com/in/elielbarone/" target="_blank" rel="noopener noreferrer"
+                                            style="color:rgb(0,123,255)"><img
+                                                src="http://eurekalabs.com.br/wp-content/uploads/2016/08/linked-in.png"
+                                                style="vertical-align:middle; border-style:none"></a>&nbsp;
+                                        <span>&nbsp;</span><a href="https://twitter.com/eliel_barone" target="_blank" rel="noopener noreferrer"
+                                            style="color:rgb(0,123,255)"><img
+                                                src="http://eurekalabs.com.br/wp-content/uploads/2016/08/twitter.png"
+                                                style="vertical-align:middle; border-style:none"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">                    
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" onblur="addFieldToPreview(event)" id="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="text" class="form-control" onblur="addFieldToPreview(event)" onkeyup="this.value = this.value.toUpperCase();" data-transformation id="role"/>
+                </div>
+
+                
+
+                <div class="form-group">
+                    <label for="Phone">Phone</label>
+                    <input type="text" class="form-control" onblur="addFieldToPreview(event)" id="phone"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="Phone">E-mail</label>
+                    <input type="email" class="form-control" onblur="addFieldToPreview(event)" id="email"/>
+                </div>
+
+                <div class="form-group">
+                       <span class="btn btn-success" onclick="downloadAsHtml('euk-signature')">Gerar</span>                        
+                </div>
+                
+            </div>
+
+    </body>
+</html>

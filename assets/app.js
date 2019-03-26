@@ -4,6 +4,11 @@ function onGenerate(blob){
     window.saveAs(blob, 'euk-moment.png');      
 }
 
+function downloadAsHtml(name){
+    var textToWrite = $('#template-section')[0].innerHTML;
+    var blob = new Blob([textToWrite], {type:'text/html'});
+    window.saveAs(blob, name || 'euk' + '.html');      
+}
 
 function generateBanner(){    
     setTimeout(donwloadBanner, 500);
@@ -16,20 +21,18 @@ function addFieldToPreview(event){
 
 function applyField(field){
     var inputValue = $('#' + field).val();
-    $('#' + field + '-label').text(inputValue)
+    var inputType = $('#' + field).attr('type');
+
+    $('#' + field + '-label').text(inputValue);
+
+    if(inputType == 'email'){        
+        $('#' + field + '-label').prop("href", "mailto:" + inputValue);
+    }
+
+
 }
 
 function donwloadBanner(){
-
-    domtoimage.toJpeg(document.getElementById('eureka-moment'), { quality: 0.95 })
-    .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'eureka-moment';
-        link.href = dataUrl;
-        link.click();
-    });
-
-    return;
     var node = document.getElementById('eureka-moment');
 
     domtoimage.toBlob(node)

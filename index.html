@@ -1,59 +1,33 @@
 <html>
     <head>
+        <Title>Eureka Generators</Title>
+
         <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> 
-        <link rel="stylesheet" type="text/css" href="./assets/app.css"> 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100i,400i" rel="stylesheet">
-        <script src="./node_modules/dom-to-image/src/dom-to-image.js"></script>
-        <script src="./node_modules/file-saver/dist/FileSaver.min.js"></script>
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./assets/app.js"></script>
     </head>
-    <body>
-            <div class="container">
-                <div class="banner-container">
-                    <div class="moment-container form-group" id="eureka-moment">
-                        <div class="info-container">
-                            <h1 id="title-label" class="title">Title</h1>
-                            <h3 id="description-label">Description of moment</h3>
-                            <h2 class="yellow-color" id="author-label">Author</h2>
-                        </div>
-                        <img src="./assets/eureka-moment.png" class="img-base"/>
-                        <img id="picture-preview" class="picture-label"/>
+    <body style="margin-top: 20px">
+        <div class="container">
+            <div class="row" style="margin-bottom: 20px;">
+                    <div class="col xs-6">
+                        <img src="http://eurekalabs.com.br/wp-content/uploads/2018/01/eureka-horizontal.png" style="max-width: 200px"/>
+                    </div>
+                    <div class="col xs-6">
+                        <p class="font-weight-light">Eureka Generators</p>
                     </div>
                 </div>
+            
 
-                
-                <div class="form-group">                    
-                    <label for="title">Title</label>
-                    <input type="title" class="form-control" onblur="addFieldToPreview(event)" id="title"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <input type="description" class="form-control" onblur="addFieldToPreview(event)" id="description"/>
-                </div>
-
-                <div class="form-group">
-                        <div class="row">
-                            <div class="col">
-                                    <label for="Author">Author</label>
-                                    <input type="author" class="form-control" onblur="addFieldToPreview(event)" id="author"/>
-                            </div>
-
-                            <div class="col file-container">
-                                    <label for="Picture">Picture</label>
-                                    <input type="file" class="file-input" id="picture" onchange="previewImage(event)"/>
-                                    <span class="btn btn-light btn-block">Choose a picture</span>
-                            </div>
-                        </div>
-                    
-                </div>
-
-                <div class="form-group">
-                       <span class="btn btn-success" onclick="generateBanner()">Gerar</span>                        
-                </div>
-                
+        <div class="row">
+            <div class="col xs-6">
+                <h3 class="font-weight-light">Eureka Moment</h3>
+                <p>Gere o Banner para o seu treinamento</p>
+                <a class="btn btn-light" href="/eureka-moment.html">Gerar</a>
             </div>
-
+            <div class="col xs-6">
+                    <h3 class="font-weight-light">Assinatura</h3>
+                    <p>Elabore sua assinatura de e-mail</p>
+                    <a class="btn btn-light" href="/email-signature.html">Gerar</a>
+                </div>
+        </div>
+    </div>
     </body>
 </html>

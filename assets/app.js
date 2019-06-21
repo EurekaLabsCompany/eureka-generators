@@ -1,7 +1,8 @@
 
 
 function onGenerate(blob){        
-    window.saveAs(blob, 'euk-moment.png');      
+    var date = new Date();    
+    window.saveAs(blob, 'eureka' + date.getMinutes() + "-" + date.getSeconds() +'.png');      
 }
 
 function downloadAsHtml(name){
@@ -11,8 +12,7 @@ function downloadAsHtml(name){
 }
 
 function generateBanner(){    
-    setTimeout(donwloadBanner, 500);
-    
+    setTimeout(donwloadBanner, 500);    
 }
 
 function addFieldToPreview(event){
@@ -47,3 +47,23 @@ function previewImage(event) {
     var output = document.getElementById('picture-preview');
     output.src = URL.createObjectURL(event.target.files[0]);
   }
+
+  function restrictToBoxPreview(size){  
+    setTimeout(resizePreview, 500);    
+
+    function resizePreview(){
+        var output = document.getElementById('picture-preview');
+        var offset = output.getBoundingClientRect();
+        var style = ''
+
+        if(offset.width < offset.height){
+            style = style + `width: ${size};`
+        }else{
+            style = style + `height: ${size};`
+        }
+
+
+        output.style = style;
+    }
+    
+}

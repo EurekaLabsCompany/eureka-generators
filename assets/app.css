@@ -10,6 +10,12 @@ body{
 .img-base{
     width: 1000px;
 }
+
+.img-base-square{
+    width: 600px;
+    height: 600px;
+}
+
 .title{
     font-weight: 100;
     font-size: 48px;
@@ -39,6 +45,13 @@ body{
     right: 2px;
 }
 
+.picture-square{
+    position: absolute;
+    z-index: -1;     
+    bottom: 2px;
+    right: 2px;
+}
+
 .banner-container{
     display: flex;
     justify-content: center;
@@ -60,4 +73,9 @@ body{
 
 .file-container > .file-input:hover{
     cursor: pointer;
+}
+
+.moment-container.square{    
+    width: 600px;
+    height: 600px;
 }

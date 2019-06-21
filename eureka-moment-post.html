@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="stylesheet"
+          type="text/css"
+          href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          type="text/css"
+          href="./assets/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,400i"
+          rel="stylesheet">
+    <script src="./node_modules/dom-to-image/src/dom-to-image.js"></script>
+    <script src="./node_modules/file-saver/dist/FileSaver.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="banner-container form-group">
+            <div class="moment-container square"
+                 id="eureka-moment">
+                <img src="./assets/eureka-moment-post.png"
+                     class="img-base-square" />
+                <img id="picture-preview"
+                     class="picture-square" />
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="row">
+
+                <div class="col file-container">
+                    <input type="file"
+                           class="file-input"
+                           id="picture"
+                           onchange="previewImage(event); restrictToBoxPreview(600)" />
+                    <span class="btn btn-light btn-block">Choose a picture</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <span class="btn btn-success"
+                  onclick="generateBanner()">Gerar</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

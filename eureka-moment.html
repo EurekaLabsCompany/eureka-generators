@@ -42,7 +42,7 @@
 
                             <div class="col file-container">
                                     <label for="Picture">Picture</label>
-                                    <input type="file" class="file-input" id="picture" onchange="previewImage(event)"/>
+                                    <input type="file" class="file-input" id="picture" onchange="previewImage(event); restrictToBoxPreview(400)"/>
                                     <span class="btn btn-light btn-block">Choose a picture</span>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="form-group">
-                       <span class="btn btn-success" onclick="generateBanner()">Gerar</span>                        
+                       <span class="btn btn-success" onclick="generateBanner(); ">Gerar</span>                        
                 </div>
                 
             </div>
